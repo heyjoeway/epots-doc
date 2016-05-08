@@ -1,0 +1,22 @@
+{
+  "name": "epots_doc",
+  "version": "1.2.0",
+  "description": "Documentation for the Eagle Pride On the Sky project.",
+  "repository": {
+    "type": "git",
+    "url": "http://git.jojudge.com/root/epots_doc.git"
+  },
+  "author": "Joseph Judge",
+  "dependencies": {
+    "grunt": "~1.0.1"
+  },
+  "devDependencies": {
+    "grunt-contrib-sass": "~1.0.0",
+    "grunt-contrib-copy": "~1.0.0",
+    "grunt-contrib-htmlmin": "~1.4.0",
+    "grunt-contrib-uglify": "~1.0.1",
+    "grunt-contrib-imagemin": "~1.0.0",
+    "grunt-string-replace": "~1.2.1",
+    "grunt-minjson": "~0.4.0"
+  }
+}

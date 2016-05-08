@@ -1,0 +1,14 @@
+stages:
+  - grunt
+
+grunt:
+  stage: grunt
+  script:
+    - "npm install"
+    - "grunt build"
+  cache:
+    paths:
+      - node_modules/
+  artifacts:
+    paths:
+      - build/

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Eagle Pride On the Sky</title>
+		<link type="text/css" rel="stylesheet" href="./css/style.min.css"/>
+		<link rel="stylesheet" href="./css/materialize.min.css">
+		<link href='./css/robotoslab.css' rel='stylesheet' type='text/css'>
+		<link href="./css/materialicons.css" rel="stylesheet">
+	</head>
+	<body>
+		<nav class="nav_main">
+			<div class="nav_placeholder"></div>
+			<div id="nav_logo" class="nav_icon"></div>
+			<div id="nav_back" class="nav_icon softhide waves-effect">
+				<i class="material-icons">arrow_back</i>
+			</div>
+			<a class="nav_title">Eagle Pride On the Sky</a>
+		</nav>
+
+		<ul id="nav_home" class="side-nav">
+			<li class="nav_info waves-effect waves-light">
+				<i class="material-icons small">info</i>
+				<a>Info</a>
+			</li>
+
+			<li class="nav_rpi waves-effect">
+				<div class="image_icon" style="background-image:url('./img/icons/rpi.png')"></div>
+				<a>Raspberry Pi</a>
+			</li>
+
+			<li class="nav_attiny waves-effect">
+				<div class="image_icon" style="background-image:url('./img/icons/attiny.png')"></div>
+				<a>ATTiny</a>
+			</li>
+
+			<li class="nav_pcb waves-effect">
+				<div class="image_icon" style="background-image:url('./img/icons/pcb.png')"></div>
+				<a>Circuit</a>
+			</li>
+
+			<li class="nav_charger waves-effect">
+				<i class="material-icons small">battery_charging_full</i>
+				<a>Charger</a>
+			</li>
+
+			<li class="nav_boost waves-effect">
+				<i class="material-icons small">power</i>
+				<a>Boost Converter</a>
+			</li>
+
+			<li class="nav_relay waves-effect">
+				<div class="image_icon" style="background-image:url('./img/icons/relay.png')"></div>
+				<a>Latching Relay</a>
+			</li>
+
+			<li class="nav_data waves-effect">
+				<i class="material-icons small">description</i>
+				<a>Data</a>
+			</li>
+		</ul>
+
+		<div id="canvas_container" class="canvas_home">
+			<div id="canvas_outer">
+				<div id="canvas_inner">
+					<div id="canvas_placeholder"></div>
+				</div>
+			</div>
+		</div>
+
+		<div id="canvas_bg" class="canvas_home"></div>
+
+		<div id="canvas_fullscreen" class="waves-effect waves-light softhide">
+			<i class="material-icons small">fullscreen</i>
+		</div>
+
+		<div id="canvas_unfullscreen" class="waves-effect waves-light softhide">
+			<i class="material-icons small">fullscreen_exit</i>
+		</div>
+
+		<div id="doc_cont">
+			<iframe id="doc_iframe" seamless></iframe>
+		</div>
+
+		<script src="./js/lib/jquery-1.11.3.min.js"></script>
+		<script src="./js/lib/materialize.min.js"></script>
+		<script src="./js/lib/three.js"></script>
+		<script src="./js/loader.js"></script>
+		<script src="./js/page.js"></script>
+	</body>
+</html>
