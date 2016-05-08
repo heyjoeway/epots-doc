@@ -106,7 +106,6 @@ grunt.initConfig({
 	// },
 });
 
-// grunt.loadNpmTasks('grunt-build-number');
 grunt.loadNpmTasks('grunt-contrib-sass');
 grunt.loadNpmTasks('grunt-contrib-htmlmin');
 grunt.loadNpmTasks('grunt-contrib-imagemin');
@@ -116,12 +115,11 @@ grunt.loadNpmTasks('grunt-minjson');
 // grunt.loadNpmTasks('grunt-string-replace');
 
 grunt.registerTask('default', [
-	// 'buildnumber',
-	// 'sass',
-	// 'htmlmin',
-	// 'imagemin',
-	// 'uglify',
-	// 'copy',
+	'sass',
+	'htmlmin',
+	'imagemin',
+	'uglify',
+	'copy',
 	'minjson'
 	// 'string-replace:version'
 ]);
