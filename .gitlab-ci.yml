@@ -5,7 +5,7 @@ grunt:
   stage: grunt
   script:
     - "npm install"
-    - "grunt build"
+    - "grunt"
   cache:
     paths:
       - node_modules/
