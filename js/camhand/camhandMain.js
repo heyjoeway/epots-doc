@@ -8,6 +8,7 @@ function camhandMain(p) {
 	this.controls = new THREE.OrbitControls(p.camera, game.renderer.domElement)
 	this.controls.enableZoom = false;
 	this.controls.enablePan = false;
+	// this.controls.enableRotate = false;
 	this.controls.enableDamping = true;
 	this.controls.dampingFactor = 0.05;
 	this.controls.rotateSpeed = 0.025;

@@ -3,8 +3,9 @@ if (!Array.prototype.fill) {
   Array.prototype.fill = function(value) {
 
     // Steps 1-2.
-    if (this === null)
-		throw new TypeError('this is null or not defined');
+    if (this == null) {
+      throw new TypeError('this is null or not defined');
+    }
 
     var O = Object(this);
 
@@ -45,6 +46,19 @@ var res = {
 	loaded: 0,
 	done: false,
 	mdl: {
+		labels: {
+			texSrc: {
+				"1": { src: "./img/labels/1.png" },
+				"2": { src: "./img/labels/2.png" },
+				"3": { src: "./img/labels/3.png" },
+				"4": { src: "./img/labels/4.png" },
+				"5": { src: "./img/labels/5.png" },
+				"6": { src: "./img/labels/6.png" },
+				"7": { src: "./img/labels/7.png" },
+				"8": { src: "./img/labels/8.png" },
+				"9": { src: "./img/labels/9.png" }
+			}
+		},
 		metalEnv: {
 			texSrc: {
 				px: { src: "./img/metal/pos-x.png" },
@@ -265,7 +279,6 @@ var res = {
 					}),
 					new THREE.MeshBasicMaterial({ // Inside Video Ports
 						color: 0x000000,
-						// shading: THREE.FlatShading
 					}),
 					new THREE.MeshLambertMaterial({ // Eth Light 2
 						color: 0x00BA00
@@ -289,10 +302,8 @@ var res = {
 				for (var texKey in texSrc) { // for each texture source listed
 					this.loadedMax++;
 					var srcCurrent = texSrc[texKey]; // get the current source
-					var loaderCurrent =	 // give alias to loader
-						obj.texLoader[texKey] = // create new loader for current source
-						new THREE.TextureLoader(); // ^^^
-					loaderCurrent.load(srcCurrent.src, (function(obj, texKey, tex) { // load dat, and do stuff when loaded
+					obj.texLoader[texKey] = new THREE.TextureLoader();
+					obj.texLoader[texKey].load(srcCurrent.src,	(function(obj, texKey, tex) {
 						for (var a in obj.texSrc[texKey]) { // for each key in texture source
 							if (a == "properties") { // check if properties exist
 								var props = obj.texSrc[texKey].properties; // if so, get them
@@ -309,20 +320,12 @@ var res = {
 			var geoSrc = obj.geoSrc; // and geometry source object of current model
 			if (typeof geoSrc != "undefined") {
 				this.loadedMax++;
-				if (typeof geoSrc == "function") {
-					obj.geoSrc();
+				obj.geoLoader = new THREE.JSONLoader();
+				obj.geoLoader.load(geoSrc, (function(obj, geo, mat) {
+					obj.geo = geo;
+					obj.mat = new THREE.MeshFaceMaterial(mat);
 					this.onLoad();
-				} else {
-					var ext = geoSrc.split('.').pop();
-					if (ext == "json") {
-						obj.geoLoader = new THREE.JSONLoader();
-						obj.geoLoader.load(geoSrc, (function(obj, geo, mat) {
-							obj.geo = geo;
-							obj.mat = new THREE.MeshFaceMaterial(mat);
-							this.onLoad();
-						}).bind(this, obj));
-					}
-				}
+				}).bind(this, obj));
 			}
 		}
 	},
@@ -343,6 +346,5 @@ var res = {
 		this.done = true;
 		window.game.init();
 	}
-};
-
+}
 res.load();

@@ -23,6 +23,7 @@ function sceneMain(p) {
 		shadowCameraNear: 0,
 		shadowCameraFar: 1.5,
 		shadowCameraFov: 45,
+		// shadowCameraVisible: true
 	};
 
 	if (!isMobile.any) {
@@ -86,6 +87,58 @@ function sceneMain(p) {
 	for (var i = 0; i < keysFocus.length; i++)
 		this.objArray.push(this.objFocus[keysFocus[i]]);
 
+	this.objLabels = {
+		// "attiny": [
+		// 	new objLabel(this,
+		// 		-0.33877, 0.09398, 0.10434,
+		// 		0.025,
+		// 		1, "attiny"
+		// 	),
+		// 	new objLabel(this,
+		// 		-0.33877, 0.09398, 0.0807,
+		// 		0.025,
+		// 		2, "attiny"
+		// 	),
+		// 	new objLabel(this,
+		// 		-0.33877, 0.09398, 0.05822,
+		// 		0.025,
+		// 		3, "attiny"
+		// 	),
+		// 	new objLabel(this,
+		// 		-0.33877, 0.09398, 0.03574,
+		// 		0.025,
+		// 		4, "attiny"
+		// 	),
+		// 	new objLabel(this,
+		// 		-0.24193, 0.09398, 0.03574,
+		// 		0.025,
+		// 		5, "attiny"
+		// 	),
+		// 	new objLabel(this,
+		// 		-0.24193, 0.09398, 0.05822,
+		// 		0.025,
+		// 		6, "attiny"
+		// 	),
+		// 	new objLabel(this,
+		// 		-0.24193, 0.09398, 0.0807,
+		// 		0.025,
+		// 		7, "attiny"
+		// 	),
+		// 	new objLabel(this,
+		// 		-0.24193, 0.09398, 0.10434,
+		// 		0.025,
+		// 		8, "attiny"
+		// 	)
+		// ]
+	};
+
+	var keysLabels = Object.keys(this.objLabels);
+	for (var i = 0; i < keysLabels.length; i++) {
+		var objs = this.objLabels[keysLabels[i]];
+		for (var j = 0; j < objs.length; j++)
+			this.objArray.push(objs[j]);
+	}
+	
 	// ---- LOOPS AND EVENTS ----
 
 	this.update = function(p) {

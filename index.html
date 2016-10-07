@@ -3,21 +3,28 @@
 	<head>
 		<title>Eagle Pride On the Sky</title>
 		<link type="text/css" rel="stylesheet" href="./css/style.min.css"/>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta name="mobile-web-app-capable" content="yes" />
+
 		<!-- <link rel="stylesheet" href="./css/materialize.min.css"> -->
 		<!-- <link href='./css/robotoslab.css' rel='stylesheet' type='text/css'> -->
 		<!-- <link href="./css/materialicons.css" rel="stylesheet"> -->
 	</head>
-	<body>
+	<body class="canvas_home">
 		<nav class="nav_main">
 			<div class="nav_placeholder"></div>
-			<div id="nav_logo" class="nav_icon"></div>
+			<div id="nav_logo" class="nav_icon softhide_mobile"></div>
+			<div id="nav_menu" class="nav_icon softhide_notmobile waves-effect">
+				<i class="material-icons">menu</i>
+			</div>
 			<div id="nav_back" class="nav_icon softhide waves-effect">
 				<i class="material-icons">arrow_back</i>
 			</div>
 			<a class="nav_title">Eagle Pride On the Sky</a>
 		</nav>
 
-		<ul id="nav_home" class="side-nav">
+		<ul id="nav_home" class="side-nav softhide_mobile">
 			<li class="nav_info waves-effect waves-light">
 				<i class="material-icons small">info</i>
 				<a>Info</a>
@@ -59,7 +66,7 @@
 			</li>
 		</ul>
 
-		<div id="canvas_container" class="canvas_home">
+		<div id="canvas_container">
 			<div id="canvas_outer">
 				<div id="canvas_inner">
 					<div id="canvas_placeholder"></div>
@@ -67,7 +74,7 @@
 			</div>
 		</div>
 
-		<div id="canvas_bg" class="canvas_home"></div>
+		<div id="canvas_bg"></div>
 
 		<div id="canvas_fullscreen" class="waves-effect waves-light softhide">
 			<i class="material-icons small">fullscreen</i>
@@ -77,15 +84,16 @@
 			<i class="material-icons small">fullscreen_exit</i>
 		</div>
 
-		<div id="doc_cont">
-			<iframe id="doc_iframe" seamless></iframe>
-		</div>
+		<div id="doc_cont"></div>
+
+		<script src="./js/lib/jquery-1.11.3.min.js"></script>
+		<script src="./js/lib/jquery.resize.js"></script>
+		<script src="./js/lib/materialize.min.js"></script>
+		<script src="./js/lib/three.js"></script>
+		<script src="./js/lib/OrbitControls.js"></script>
+		<script src="./js/lib/threex.domevents.js"></script>
+		<script src="./js/lib/isMobile.min.js"></script>
 
 		<script src="./js/script.min.js"></script>
-		<!-- <script src="./js/lib/jquery-1.11.3.min.js"></script> -->
-		<!-- <script src="./js/lib/materialize.min.js"></script> -->
-		<!-- <script src="./js/lib/three.js"></script> -->
-		<!-- <script src="./js/loader.js"></script> -->
-		<!-- <script src="./js/page.js"></script> -->
 	</body>
 </html>

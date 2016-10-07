@@ -24,14 +24,14 @@ var game = {
 		this.sceneModel = new sceneMain(this);
 		this.sceneArray = [this.sceneModel];
 
-		$(window).resize(function() { game.resize(); });
+		$(window).resize(function() { game.resize() });
 		this.resize();
 		this.update();
 	},
 
 	resize: function() {
 		var jq = $("body");
-		this.size = Math.min(jq.width(), jq.height());
+		this.size = Math.min(jq.width(), jq.height())
 		this.width = this.height = this.size;
 		this.renderer.setSize(this.size, this.size);
 		resizeArray(this.sceneArray, this);
@@ -41,4 +41,4 @@ var game = {
 		updateArray(game.sceneArray, game);
 		requestAnimationFrame(game.update);
 	}
-};
+}

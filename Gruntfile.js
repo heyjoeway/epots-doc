@@ -47,18 +47,21 @@ grunt.initConfig({
 	},
 	copy: {
 		dist: {
-			files: [
-				{
-					expand: true,
-					src: 'font/**',
-					dest: BUILD_DIR
-				}, {
-					expand: true,
-					cwd: 'img/',
-					src: '**/*.svg',
-					dest: BUILD_DIR + "img/"
-				}			
-			]
+			files: [{
+				expand: true,
+				src: 'font/**',
+				dest: BUILD_DIR
+			}, {
+				expand: true,
+				cwd: 'img/',
+				src: '**/*.svg',
+				dest: BUILD_DIR + "img/"
+			}, {
+				expand: true,
+				cwd: 'js_ext/',
+				src: '**/*.js',
+				dest: BUILD_DIR + "js/"
+			}]
 		}
 	},
 	minjson: {

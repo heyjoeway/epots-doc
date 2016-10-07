@@ -1,0 +1,57 @@
+
+@media (min-width: 601px) {
+	.softhide_notmobile {
+		opacity: 0;
+		pointer-events: none;
+	}
+}
+
+@media (max-width: 600px) {
+	#nav_home {
+		left: 0;
+	}
+
+	.softhide_notmobile {
+		pointer-events: initial;
+		opacity: 1;
+	}
+
+	.softhide_mobile {
+		opacity: 0;
+		pointer-events: none;
+	}
+
+	#doc_cont {
+		opacity: 0;
+		pointer-events: none;
+		width: 100%;
+		padding-top: 64px;
+		z-index: 9998;
+	}
+
+	.canvas_left {
+		#canvas_container {
+			width: 100%;
+		}
+		
+		#doc_cont {
+			background: rgba(255, 255, 255, 0.8);
+			opacity: 1;
+			pointer-events: initial;
+		}
+		#canvas_bg {
+			transform: none;
+		}
+	}
+
+	#canvas_fullscreen, #canvas_unfullscreen {
+		top: 0;
+		right: 0;
+		bottom: initial;
+		left: initial;
+	}
+
+	.nav_main {
+		width: 100%;
+	}
+}
