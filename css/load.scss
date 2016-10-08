@@ -1,0 +1,14 @@
+#load {
+	transition: opacity 0.5s;
+
+	position: fixed;
+	width: 100%;
+	height: 100%;
+
+	z-index: 10000;
+
+	background-color: #e53935;
+	background-image: url("../img/logo/loading.png");
+	background-repeat: no-repeat;
+	background-position: center;
+}

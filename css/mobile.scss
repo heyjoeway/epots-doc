@@ -1,12 +1,12 @@
 
-@media (min-width: 601px) {
+@media (min-width: 991px) {
 	.softhide_notmobile {
 		opacity: 0;
 		pointer-events: none;
 	}
 }
 
-@media (max-width: 600px) {
+@media (max-width: 990px) {
 	#nav_home {
 		left: 0;
 	}
@@ -39,8 +39,10 @@
 			opacity: 1;
 			pointer-events: initial;
 		}
+
 		#canvas_bg {
 			transform: none;
+			opacity: 0;
 		}
 	}
 
@@ -54,4 +56,5 @@
 	.nav_main {
 		width: 100%;
 	}
+
 }

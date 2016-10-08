@@ -8,8 +8,13 @@ grunt.initConfig({
 			options: {
 				style: "compressed",
 			},
-			src: "css/style.scss",
-			dest: BUILD_DIR + "css/style.min.css"
+			files: [{
+				src: "css/style.scss",
+				dest: BUILD_DIR + "css/style.min.css"
+			}, {
+				src: "css/load.scss",
+				dest: BUILD_DIR + "css/load.min.css"
+			}]
 		},
 	},
 	htmlmin: {

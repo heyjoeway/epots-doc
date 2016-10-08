@@ -37,6 +37,8 @@ $(window).load(function() {
 			$("#nav_home").removeClass("softhide_mobile");
 		}, 1);
 	});
+
+	$("#load").addClass("softhide");
 });
 
 function canvasMinimize() {
